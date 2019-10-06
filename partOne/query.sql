@@ -38,3 +38,8 @@ primary key
     ("smith", "John", "Willy", 23, "Web developer")
 ,
     ("smith", "Linda", "Stina", 43, "Web Designer");
+
+
+  select name
+  from cats
+  where name = "Bobby";
