@@ -156,7 +156,12 @@ primary key
   FROM cats
   WHERE name='egG';
 
+  select name , breed
+  from cats;
 
+  select name, age
+  from cats
+  where breed = "Tabby";
 
 
 
