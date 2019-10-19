@@ -6,7 +6,7 @@ from books;
 
 
 select
-  CONCAT(
+    CONCAT(
   SUBSTRING
   (title,1,12)
   ,' ...'
@@ -49,7 +49,7 @@ SELECT CONCAT
     )
 FROM books;
 
-source book_code.sql
+
 
 SELECT CONCAT
     (
@@ -58,4 +58,5 @@ SELECT CONCAT
     ) AS 'short title'
 FROM books;
 
-source book_code.sql
+
+
