@@ -32,10 +32,12 @@ SELECT *
 FROM customers
   LEFT JOIN orders
   ON customers.id = orders.customer_id;
+
 SELECT first_name, last_name, order_date, amount
 FROM customers
   LEFT JOIN orders
   ON customers.id = orders.customer_id;
+
 SELECT
   first_name,
   last_name,
@@ -45,3 +47,20 @@ FROM customers
   ON customers.id = orders.customer_id
 GROUP BY customers.id
 ORDER BY total_spent;
+
+SELECT *
+FROM customers
+  LEFT JOIN orders
+  ON customers.id = orders.customer_id;
+SELECT *
+FROM orders
+  RIGHT JOIN customers
+  ON customers.id = orders.customer_id;
+SELECT *
+FROM orders
+  LEFT JOIN customers
+  ON customers.id = orders.customer_id;
+SELECT *
+FROM customers
+  RIGHT JOIN orders
+  ON customers.id = orders.customer_id;
