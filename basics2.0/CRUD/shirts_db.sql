@@ -30,11 +30,30 @@ create table shirts
     ('polo shirt', 'Purple', 'M', 50);
 
 
-
+  -- SELECT all shirts
+  -- But Only Print Out Article and Color
   SELECT article, color
   from shirts;
 
-
+  -- SELECT all medium shirts
+  -- Print Out Everything But shirt_id
   select shirt_size
   from shirts
   where shirt_size = 'M';
+
+
+  --   Update the shirt last worn 15 days ago
+  -- Change last_worn to 0
+  UPDATE shirts SET last_worn = 0 where last_worn = 15;
+
+
+  --   Update all white shirts
+  -- Change size to 'XS' and color to 'off white'
+
+  UPDATE shirts SET  color = "white" where  shirt_size = "XS";
+
+
+  --   Delete all old shirts
+  -- Last worn 200 days ago
+
+  Delete from shirts where last_worn = 200;
