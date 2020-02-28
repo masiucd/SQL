@@ -29,6 +29,16 @@ FROM people;
 SELECT EXTRACT(YEAR FROM birthdate)
 FROM people;
 
+
+SELECT DATE_FORMAT(birthdate, '%w %m %d')
+from people;
+
+SELECT DATE_FORMAT(birthdate, '%Y %W %M %D')
+from people;
+
+SELECT DATE_FORMAT(birthdate, '%r')
+from people;
+
 SELECT *
 FROM people;
 
