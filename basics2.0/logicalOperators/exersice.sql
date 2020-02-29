@@ -39,10 +39,11 @@ SELECT
 FROM books b;
 
 
-select b.author_fname, b.author_lname ,
-  CASE
-    when count(*) = 1 then '1 book'
-    else concat(count(*), ' books')
-    end as count
+SELECT b.author_lname, b.author_fname,
+  case
+   WHEN count(*) = 1 then CONCAT(count(*), " book")
+   else CONCAT(count(*), " books")
+  END as count
 from books b
-group by b.author_fname , b.author_lname;
+GROUP BY b.author_lname, b.author_fname
+ORDER by count(*) DESC;
