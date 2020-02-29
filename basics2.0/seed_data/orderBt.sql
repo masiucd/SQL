@@ -2,11 +2,9 @@ SELECT title
 from books
 order by author_fname;
 
-
 SELECT title
 from books
 order by title;
-
 
 
 SELECT released_year
