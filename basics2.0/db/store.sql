@@ -21,6 +21,8 @@ CREATE TABLE customers
   FOREIGN KEY
     (customer_id) REFERENCES customers
     (id)
+    ON
+    DELETE CASCADE
 );
 
 
