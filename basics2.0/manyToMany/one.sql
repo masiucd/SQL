@@ -22,3 +22,10 @@ from series s
   on s.id = r.series_id
 GROUP by s.title
 order by rating DESC;
+
+SELECT s.title, ROUND(AVG(r.rating),2) as avg_rating
+from series s
+  LEFT join reviews r
+  on s.id = r.series_id
+GROUP by s.id
+order by avg_rating DESC;
