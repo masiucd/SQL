@@ -18,3 +18,10 @@ from series s
   left JOIN reviews r
   on s.id = r.series_id
 WHERE r.rating is null;
+
+
+SELECT title AS unreviewed_series
+FROM series
+  LEFT JOIN reviews
+  ON series.id = reviews.series_id
+WHERE rating IS NULL;
