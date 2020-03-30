@@ -7,4 +7,4 @@ from users u
   on u.id = l.user_id
 GROUP BY l.user_id
 HAVING numLikes = (SELECT COUNT(*)
-from photos)
+from photos);
