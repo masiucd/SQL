@@ -6,7 +6,6 @@ const Main = styled.main`
   margin: 0 auto;
   max-width: 900px;
   min-height: 100vh;
-  border: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,4 +1,3 @@
-import { cx, css } from "@emotion/css";
 import styled from "@emotion/styled";
 import React, { useState } from "react";
 import { buttonStyles } from "../styled/reset-button-styles";
@@ -6,12 +5,11 @@ import * as Math from "mathjs";
 
 const CalculatorWrapper = styled.section`
   border-radius: 4px;
-  width: 70%;
-  /* min-height: 25rem; */
+  width: 300px;
 `;
 
 const Head = styled.div`
-  /* margin-bottom: 1rem; */
+  padding: 0.1rem 0;
 `;
 
 const Display = styled.div`
@@ -30,9 +28,26 @@ const Body = styled.div`
   grid-gap: 1px;
   .btn-AC {
     grid-row: span 2;
+    background-color: var(--cyan-process);
   }
   .btn-equal {
     grid-column: span 4;
+    background-color: var(--cyan-process);
+  }
+  .btn-mul {
+    background-color: var(--cyan-process);
+  }
+  .btn-divide {
+    background-color: var(--cyan-process);
+  }
+  .btn-plus {
+    background-color: var(--cyan-process);
+  }
+  .btn-minus {
+    background-color: var(--cyan-process);
+  }
+  .btn-dot {
+    background-color: var(--cyan-process);
   }
 
   button {
@@ -74,7 +89,6 @@ export const Calculator = () => {
   const [input, setInput] = useState<string[]>([]);
 
   const calculate = () => {
-    // console.log(Math.compile(input));
     const result = Math.evaluate(input.join(""));
     setInput([result]);
   };
@@ -128,8 +142,7 @@ export const Calculator = () => {
         break;
       case ".":
         setInput(p => [...p, action]);
-      case "sqrt":
-        setInput(p => [...p, "**"]);
+
         break;
       case "AC":
         setInput([]);
@@ -169,7 +182,26 @@ export const Calculator = () => {
       </Head>
       <Body className="body">
         {keyboardValues.map(v => (
-          <button key={v} className={`btn-${v === "." ? "dot" : v === "=" ? "equal" : v}`}>
+          <button
+            name={v}
+            onClick={() => handleClick(v as ButtonName)}
+            key={v}
+            className={`btn-${
+              v === "."
+                ? "dot"
+                : v === "="
+                ? "equal"
+                : v === "*"
+                ? "mul"
+                : v === "/"
+                ? "divide"
+                : v === "+"
+                ? "plus"
+                : v === "-"
+                ? "minus"
+                : v
+            }`}
+          >
             {" "}
             {v}{" "}
           </button>

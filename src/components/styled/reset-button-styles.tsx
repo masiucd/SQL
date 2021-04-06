@@ -8,4 +8,5 @@ export const buttonStyles = css`
   border: 1px solid var(--dark);
   outline: none;
   background: var(--white);
+  border-radius: 4px;
 `;
