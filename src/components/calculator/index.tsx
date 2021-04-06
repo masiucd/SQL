@@ -2,6 +2,7 @@ import { cx, css } from "@emotion/css";
 import styled from "@emotion/styled";
 import React, { useState } from "react";
 import { buttonStyles } from "../styled/reset-button-styles";
+import * as Math from "mathjs";
 
 const CalculatorWrapper = styled.section`
   border-radius: 4px;
@@ -23,56 +24,29 @@ const Display = styled.div`
   color: var(--dark);
 `;
 
-const TopRow = styled.div`
-  display: flex;
-  button {
-    ${buttonStyles}
-    flex: 1;
-    background-color: var(--button-bg);
-    color: var(--white);
-  }
-`;
-
-const numbersStyle = css`
+const Body = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  button {
-    ${buttonStyles}
-    &:nth-of-type(4) {
-      background-color: var(--button-bg);
-      color: var(--white);
-    }
-    &:nth-of-type(8) {
-      background-color: var(--button-bg);
-      color: var(--white);
-    }
-    &:nth-of-type(12) {
-      background-color: var(--button-bg);
-      color: var(--white);
-    }
-    &:nth-of-type(13) {
-      grid-column: span 2;
-    }
-    &:nth-of-type(15) {
-      background-color: var(--button-bg);
-      color: var(--white);
-    }
+  .btn-dot {
+    background-color: red;
+    grid-column: span 2;
   }
-
-  /* &:not(:last-child) {
-    margin-right: 0.2rem;
-  } */
+  .btn-0 {
+    background-color: red;
+    /* grid-column: span 3; */
+  }
 `;
 
 type ButtonName =
   | "AC"
   | "+"
-  | "+/-"
-  | "c"
+  | "/"
+  | "sqrt"
+  | "."
   | "%"
   | "-"
-  | "x"
+  | "*"
   | "="
   | "0"
   | "1"
@@ -85,116 +59,111 @@ type ButtonName =
   | "8"
   | "9";
 
-const isNumber = (n: string) => /[0-9]+/.test(n);
-
-const calculate = (state: State, buttonName: ButtonName): State => {
-  if (buttonName === "AC") {
-    return {
-      ...state,
-      total: "0",
-      next: "0",
-      operation: null,
-    };
-  }
-
-  // if (isNumber(buttonName)) {
-  if (buttonName === "0") {
-    return {
-      ...state,
-      next: buttonName,
-    };
-  }
-  if (buttonName === "1") {
-    return {
-      ...state,
-      next: buttonName,
-    };
-  }
-  // }
-  return state;
-};
-
-interface State {
-  total: string;
-  next: string;
-  operation: null | string;
-}
-
 export const Calculator = () => {
-  const [state, setState] = useState<State>({
-    total: "0",
-    next: "0",
-    operation: null,
-  });
+  const [input, setInput] = useState<string[]>([]);
+
+  const calculate = () => {
+    // console.log(Math.compile(input));
+    const result = Math.evaluate(input.join(""));
+    setInput([result]);
+  };
 
   const handleClick = (action: ButtonName) => {
-    console.log(state);
-    setState(p => ({ ...p, next: action }));
-    const result = calculate(state, action);
-    setState(result);
+    switch (action) {
+      case "0":
+        setInput(p => [...p, action]);
+        break;
+      case "1":
+        setInput(p => [...p, action]);
+        break;
+      case "2":
+        setInput(p => [...p, action]);
+        break;
+      case "3":
+        setInput(p => [...p, action]);
+        break;
+      case "4":
+        setInput(p => [...p, action]);
+        break;
+      case "5":
+        setInput(p => [...p, action]);
+        break;
+      case "6":
+        setInput(p => [...p, action]);
+        break;
+      case "7":
+        setInput(p => [...p, action]);
+        break;
+      case "8":
+        setInput(p => [...p, action]);
+        break;
+      case "9":
+        setInput(p => [...p, action]);
+        break;
+      case "+":
+        setInput(p => [...p, action]);
+        break;
+      case "*":
+        setInput(p => [...p, action]);
+        break;
+      case "-":
+        setInput(p => [...p, action]);
+        break;
+      case "%":
+        setInput(p => [...p, action]);
+        break;
+      case "/":
+        setInput(p => [...p, action]);
+        break;
+      case ".":
+        setInput(p => [...p, action]);
+      case "sqrt":
+        setInput(p => [...p, "**"]);
+        break;
+      case "AC":
+        setInput([]);
+
+        break;
+      case "=":
+        calculate();
+        break;
+      default:
+        break;
+    }
   };
+  const keyboardValues = [
+    "1",
+    "2",
+    "3",
+    "+",
+    "4",
+    "5",
+    "6",
+    "/",
+    "7",
+    "8",
+    "9",
+    "AC",
+    "*",
+    "-",
+    "=",
+    ".",
+    "0",
+  ];
 
   return (
     <CalculatorWrapper>
       <Head className="head">
-        <Display>{state.next || state.total || "0"}</Display>
+        <Display>{input || ""}</Display>
       </Head>
-      <div className="body">
-        <TopRow className="top-row">
-          <button onClick={() => handleClick("AC")}>AC</button>
-          <button onClick={() => handleClick("+/-")}>+/-</button>
-          <button onClick={() => handleClick("%")}>%</button>
-          <button onClick={() => handleClick("c")}>C</button>
-        </TopRow>
-
-        <div className={cx(numbersStyle, "numbers")}>
-          <button name="1" onClick={() => handleClick("1")} className="btn-1">
-            1
+      <Body className="body">
+        {keyboardValues.map(v => (
+          <button key={v} className={`btn-${v === "." ? "dot" : v}`}>
+            {" "}
+            {v}{" "}
           </button>
-          <button name="2" onClick={() => handleClick("2")} className="btn-2">
-            2
-          </button>
-          <button name="3" onClick={() => handleClick("3")} className="btn-3">
-            3
-          </button>
-          <button name="x" onClick={() => handleClick("x")} className="btn-4">
-            X
-          </button>
-          <button name="4" onClick={() => handleClick("4")} className="btn-5">
-            4
-          </button>
-          <button name="5" onClick={() => handleClick("5")} className="btn-6">
-            5
-          </button>
-          <button name="6" onClick={() => handleClick("6")} className="btn-7">
-            6
-          </button>
-          <button name="-" onClick={() => handleClick("-")} className="btn-8">
-            -
-          </button>
-          <button name="7" onClick={() => handleClick("7")} className="btn-9">
-            7
-          </button>
-          <button name="8" onClick={() => handleClick("8")} className="btn-10">
-            8
-          </button>
-          <button name="9" onClick={() => handleClick("9")} className="btn-11">
-            9
-          </button>
-          <button name="+" onClick={() => handleClick("+")} className="btn-12">
-            +
-          </button>
-          <button name="0" onClick={() => handleClick("0")} className="btn-13">
-            0
-          </button>
-          <button name="." onClick={() => handleClick("-")} className="btn-14">
-            .
-          </button>
-          <button name="=" onClick={() => handleClick("=")} className="btn-15">
-            =
-          </button>
-        </div>
-      </div>
+        ))}
+      </Body>
     </CalculatorWrapper>
   );
 };
