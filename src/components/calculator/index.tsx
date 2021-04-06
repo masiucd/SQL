@@ -27,14 +27,25 @@ const Display = styled.div`
 const Body = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
-  .btn-dot {
-    background-color: red;
-    grid-column: span 2;
+  grid-gap: 1px;
+  .btn-AC {
+    grid-row: span 2;
   }
-  .btn-0 {
-    background-color: red;
-    /* grid-column: span 3; */
+  .btn-equal {
+    grid-column: span 4;
+  }
+
+  button {
+    ${buttonStyles}
+    padding: 1rem;
+    background-color: var(--tiffany-blue);
+    color: var(--white);
+    transition: all 200ms ease-in-out;
+    &:active {
+      position: relative;
+      top: 2px;
+      opacity: 0.8;
+    }
   }
 `;
 
@@ -43,7 +54,6 @@ type ButtonName =
   | "+"
   | "/"
   | "sqrt"
-  | "."
   | "%"
   | "-"
   | "*"
@@ -56,6 +66,7 @@ type ButtonName =
   | "5"
   | "6"
   | "7"
+  | "."
   | "8"
   | "9";
 
@@ -143,12 +154,12 @@ export const Calculator = () => {
     "7",
     "8",
     "9",
-    "AC",
     "*",
-    "-",
-    "=",
-    ".",
     "0",
+    "-",
+    ".",
+    "AC",
+    "=",
   ];
 
   return (
@@ -158,7 +169,7 @@ export const Calculator = () => {
       </Head>
       <Body className="body">
         {keyboardValues.map(v => (
-          <button key={v} className={`btn-${v === "." ? "dot" : v}`}>
+          <button key={v} className={`btn-${v === "." ? "dot" : v === "=" ? "equal" : v}`}>
             {" "}
             {v}{" "}
           </button>
