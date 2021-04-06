@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import React, { useState } from "react";
 import { buttonStyles } from "../styled/reset-button-styles";
 import * as Math from "mathjs";
+import { ButtonName } from "../../types";
+import Button from "./button";
 
 const CalculatorWrapper = styled.section`
   border-radius: 4px;
@@ -64,32 +66,12 @@ const Body = styled.div`
   }
 `;
 
-type ButtonName =
-  | "AC"
-  | "+"
-  | "/"
-  | "sqrt"
-  | "%"
-  | "-"
-  | "*"
-  | "="
-  | "0"
-  | "1"
-  | "2"
-  | "3"
-  | "4"
-  | "5"
-  | "6"
-  | "7"
-  | "."
-  | "8"
-  | "9";
-
 const Calculator = () => {
   const [input, setInput] = useState<string[]>([]);
 
   const calculate = () => {
     const result = Math.evaluate(input.join(""));
+    // console.log(Math.parse("sqrt(3^2)").compile().evaluate());
     setInput([result]);
   };
 
@@ -182,29 +164,7 @@ const Calculator = () => {
       </Head>
       <Body className="body">
         {keyboardValues.map(v => (
-          <button
-            name={v}
-            onClick={() => handleClick(v as ButtonName)}
-            key={v}
-            className={`btn-${
-              v === "."
-                ? "dot"
-                : v === "="
-                ? "equal"
-                : v === "*"
-                ? "mul"
-                : v === "/"
-                ? "divide"
-                : v === "+"
-                ? "plus"
-                : v === "-"
-                ? "minus"
-                : v
-            }`}
-          >
-            {" "}
-            {v}{" "}
-          </button>
+          <Button key={v} v={v as ButtonName} handleClick={handleClick} />
         ))}
       </Body>
     </CalculatorWrapper>

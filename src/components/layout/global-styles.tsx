@@ -7,12 +7,16 @@ export const GlobalStyles = () => {
       <Global
         styles={css`
           :root {
-            --dark: #150811;
-            --dark-purple: #26081c;
+            --dark: #1a1a1a;
             --violet: #380036;
-            --tiffany-blue: #0cbaba;
+            --tiffany-blue: #83d8d8;
+            --red: #e64c4c;
+            --grey: #e6e6e6;
             --cyan-process: #01baef;
+            --purple: #514762;
+            --dark-purple: #383243;
             --white: #fff;
+            --green: #cbe56c;
 
             /* elements */
             --background: var(--dark);
