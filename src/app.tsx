@@ -1,11 +1,10 @@
 import React from "react";
-import { Calculator } from "./components/calculator";
 import { Layout } from "./components/layout";
-
+import Routes from "./components/routes";
 export const App = () => {
   return (
     <Layout>
-      <Calculator />
+      <Routes />
     </Layout>
   );
 };

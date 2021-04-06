@@ -85,7 +85,7 @@ type ButtonName =
   | "8"
   | "9";
 
-export const Calculator = () => {
+const Calculator = () => {
   const [input, setInput] = useState<string[]>([]);
 
   const calculate = () => {
@@ -210,3 +210,5 @@ export const Calculator = () => {
     </CalculatorWrapper>
   );
 };
+
+export default Calculator;
