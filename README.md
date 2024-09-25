@@ -11,16 +11,16 @@ This repository contains implementations of various data structures and algorith
 
 ## Data Structures
 
-- [x] Arrays
-- [x] Linked Lists
-- [x] Stacks
-- [x] Queues
-- [x] Hash Tables
-- [x] Trees
-- [x] Graphs
-- [x] Tries
-- [x] Heaps
-- [x] Priority Queues
+- [] Arrays
+- [] Linked Lists
+- [] Stacks
+- [] Queues
+- [] Hash Tables
+- [] Trees
+- [] Graphs
+- [] Tries
+- [] Heaps
+- [] Priority Queues
 - [ ] Disjoint Sets
 - [ ] Segment Trees
 - [ ] Binary Indexed Trees
@@ -32,23 +32,23 @@ This repository contains implementations of various data structures and algorith
 
 ## Algorithms
 
-- [x] Sorting
-- [x] Searching
-- [x] Graph Traversal
-- [x] Tree Traversal
-- [x] String Matching
-- [x] Dynamic Programming
-- [x] Greedy Algorithms
-- [x] Divide and Conquer
-- [x] Backtracking
-- [x] Bit Manipulation
-- [x] Recursion
-- [x] Memoization
-- [x] Dynamic Programming
-- [x] Backtracking
-- [x] Divide and Conquer
-- [x] Greedy Algorithms
-- [x] Dynamic Programming
+- [] Sorting
+- [] Searching
+- [] Graph Traversal
+- [] Tree Traversal
+- [] String Matching
+- [] Dynamic Programming
+- [] Greedy Algorithms
+- [] Divide and Conquer
+- [] Backtracking
+- [] Bit Manipulation
+- [] Recursion
+- [] Memoization
+- [] Dynamic Programming
+- [] Backtracking
+- [] Divide and Conquer
+- [] Greedy Algorithms
+- [] Dynamic Programming
 
 ## Contributing
 
