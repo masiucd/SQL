@@ -18,20 +18,24 @@ export function updateInventory(
     .sort((a, b) => (a[1] as string).localeCompare(b[1] as string));
 }
 
-// Example inventory lists
-let curInv = [
-  [21, "Bowling Ball"],
-  [2, "Dirty Sock"],
-  [1, "Hair Pin"],
-  [5, "Microphone"],
-];
+export function updateInventoryV2(
+  currentInventory: [number, string][],
+  newInventory: [number, string][]
+): [number, string][] {
+  const inventory = new Map<string, number>();
 
-let newInv = [
-  [2, "Hair Pin"],
-  [3, "Half-Eaten Apple"],
-  [67, "Bowling Ball"],
-  [7, "Toothpaste"],
-];
+  // Update inventory with current items
+  for (const [quantity, item] of currentInventory) {
+    inventory.set(item, quantity);
+  }
 
-let res = updateInventory(curInv, newInv);
-console.log(res);
+  // Update inventory with new items
+  for (const [quantity, item] of newInventory) {
+    inventory.set(item, (inventory.get(item) || 0) + quantity);
+  }
+
+  // Convert Map to array and sort by item name
+  return Array.from(inventory.entries())
+    .map(([item, quantity]): [number, string] => [quantity, item])
+    .sort((a, b) => a[1].localeCompare(b[1]));
+}
