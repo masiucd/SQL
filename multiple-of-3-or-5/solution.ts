@@ -1,4 +1,4 @@
-function multiplesOf3Or5(number: number) {
+export function multiplesOf3Or5(number: number) {
   let xs = [];
   for (let i = 1; i < number; i++) {
     if (i % 3 === 0 || i % 5 === 0) {
@@ -7,6 +7,3 @@ function multiplesOf3Or5(number: number) {
   }
   return xs.reduce((a, b) => a + b, 0);
 }
-
-let r = multiplesOf3Or5(1000);
-console.log(r);
