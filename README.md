@@ -12,19 +12,63 @@ This repository contains implementations of various data structures and algorith
 ## Data Structures
 
 - [ ] Arrays
+  - [ ] Dynamic Array
+  - [ ] Static Array
 - [ ] Linked Lists
+  - [ ] Singly Linked List
+  - [ ] Doubly Linked List
+  - [ ] Circular Linked List
 - [ ] Stacks
+  - [ ] Array-based Stack
+  - [ ] Linked List-based Stack
 - [ ] Queues
+  - [ ] Array-based Queue
+  - [ ] Linked List-based Queue
+  - [ ] Circular Buffer
 - [ ] Hash Tables
+  - [ ] Hash Map
+  - [ ] Hash Set
 - [ ] Trees
+  - [ ] Binary Trees
+  - [ ] Binary Search Trees
+  - [ ] Heaps
+  - [ ] Tries
+  - [ ] Segment Trees
+  - [ ] Binary Indexed Trees
+  - [ ] Suffix Arrays
+  - [ ] Suffix Trees
+  - [ ] Suffix Automata
 - [ ] Graphs
+  - [ ] Adjacency List
+  - [ ] Adjacency Matrix
+  - [ ] Edge List
 - [ ] Tries
+  - [ ] Trie
+  - [ ] Trie Map
+  - [ ] Trie Set
 - [ ] Heaps
+  - [ ] Min Heap
+  - [ ] Max Heap
 - [ ] Priority Queues
+  - [ ] Priority Queue
+  - [ ] Priority Queue Map
+  - [ ] Priority Queue Set
 - [ ] Disjoint Sets
+  - [ ] Disjoint Set
+  - [ ] Disjoint Set Map
+  - [ ] Disjoint Set Set
 - [ ] Segment Trees
+  - [ ] Segment Tree
+  - [ ] Segment Tree Map
+  - [ ] Segment Tree Set
 - [ ] Binary Indexed Trees
+  - [ ] Binary Indexed Tree
+  - [ ] Binary Indexed Tree Map
+  - [ ] Binary Indexed Tree Set
 - [ ] Suffix Arrays
+  - [ ] Suffix Array
+  - [ ] Suffix Array Map
+  - [ ] Suffix Array Set
 - [ ] Suffix Trees
 - [ ] Suffix Automata
 - [ ] Trees
@@ -33,16 +77,68 @@ This repository contains implementations of various data structures and algorith
 ## Algorithms
 
 - [ ] Sorting
+  - [ ] Bubble Sort
+  - [ ] Selection Sort
+  - [ ] Insertion Sort
+  - [ ] Merge Sort
+  - [ ] Quick Sort
+  - [ ] Heap Sort
+  - [ ] Radix Sort
+  - [ ] Counting Sort
+  - [ ] Bucket Sort
 - [ ] Searching
+  - [x] Linear Search
+  - [x] Binary Search
 - [ ] Graph Traversal
+  - [ ] Depth-First Search (DFS)
+  - [ ] Breadth-First Search (BFS)
+  - [ ] Dijkstra's Algorithm
+  - [ ] A\* Search Algorithm
+  - [ ] Bellman-Ford Algorithm
+  - [ ] Floyd-Warshall Algorithm
+  - [ ] Prim's Algorithm
+  - [ ] Kruskal's Algorithm
+  - [ ] Topological Sorting
+  - [ ] Strongly Connected Components
+  - [ ] Dijkstra's Algorithm
 - [ ] Tree Traversal
+  - [ ] Depth-First Search (DFS)
+  - [ ] Breadth-First Search (BFS)
+  - [ ] Dijkstra's Algorithm
+  - [ ] A\* Search Algorithm
+  - [ ] Bellman-Ford Algorithm
+  - [ ] Floyd-Warshall Algorithm
+  - [ ] Prim's Algorithm
+  - [ ] Kruskal's Algorithm
+  - [ ] Topological Sorting
+  - [ ] Strongly Connected Components
+  - [ ] Dijkstra's Algorithm
 - [ ] String Matching
 - [ ] Dynamic Programming
 - [ ] Greedy Algorithms
 - [ ] Divide and Conquer
+  - [ ] Merge Sort
+  - [ ] Quick Sort
+  - [ ] Heap Sort
+  - [ ] Radix Sort
+  - [ ] Counting Sort
+  - [ ] Bucket Sort
+  - [ ] Shell Sort
+  - [ ] Comb Sort
+  - [ ] Pigeonhole Sort
 - [ ] Backtracking
 - [ ] Bit Manipulation
 - [ ] Recursion
+  - [ ] Recursive Search
+  - [ ] Recursive Sorting
+  - [ ] Recursive Tree Traversal
+  - [ ] Recursive Graph Traversal
+  - [ ] Recursive String Matching
+  - [ ] Recursive Dynamic Programming
+  - [ ] Recursive Greedy Algorithms
+  - [ ] Recursive Divide and Conquer
+  - [ ] Recursive Backtracking
+  - [ ] Recursive Bit Manipulation
 - [ ] Memoization
 - [ ] Dynamic Programming
 - [ ] Backtracking
