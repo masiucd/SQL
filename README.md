@@ -145,6 +145,10 @@ This repository contains implementations of various data structures and algorith
 - [ ] Divide and Conquer
 - [ ] Greedy Algorithms
 - [ ] Dynamic Programming
+- [ ] Mixed
+  - [x] multiple-of-3-or-5
+  - [] fizz-buzz
+  - [x] update-inventory
 
 ## Contributing
 
