@@ -11,7 +11,7 @@ This repository contains implementations of various data structures and algorith
 
 ## Data Structures
 
-- [ ] Arrays
+- [x] Arrays
   - [x] Dynamic Array
   - [x] Static Array
 - [ ] Linked Lists
@@ -153,7 +153,3 @@ This repository contains implementations of various data structures and algorith
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
