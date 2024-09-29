@@ -11,19 +11,26 @@ export class SingleLinkedList<T> implements List<T> {
     this.length = 0;
   }
   getHead(): Node<T> | null {
-    throw new Error("Method not implemented.");
+    return this.head;
   }
   getTail(): Node<T> | null {
-    throw new Error("Method not implemented.");
+    return this.tail;
   }
   getLength(): number {
-    throw new Error("Method not implemented.");
+    return this.length;
   }
   isEmpty(): boolean {
-    throw new Error("Method not implemented.");
+    return this.getLength() === 0;
   }
   append(value: T): void {
-    throw new Error("Method not implemented.");
+    let newNode = new Node(value);
+    if (this.isEmpty()) {
+      this.head = newNode;
+      this.tail = newNode;
+      this.length++;
+    } else {
+      this.t;
+    }
   }
   prepend(value: T): void {
     throw new Error("Method not implemented.");

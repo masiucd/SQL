@@ -1,27 +1,19 @@
-let iter = {
-  count: 0,
-  next() {
-    if (this.done()) return undefined;
-    this.count++;
-    return this.count;
-  },
-  done() {
-    return this.count === 3;
-  },
-};
+function pairwise(arr: number[], arg: number) {
+  if (arr.length === 0) return 0;
+  let result = 0;
+  let banned = new Set();
+  for (let i = 0; i < arr.length; i++) {
+    let element = arr[i];
+    for (let j = i + 1; j < arr.length; j++) {
+      let innerElement = arr[j];
+      if (element + innerElement === arg && !banned.has(i)) {
+        result += i + j;
+        banned.add(i);
+        break;
+      }
+    }
+  }
+  return result;
+}
 
-let v = iter.next();
-let done = iter.done();
-console.log(v, done);
-
-v = iter.next();
-done = iter.done();
-console.log(v, done);
-
-v = iter.next();
-done = iter.done();
-console.log(v, done);
-
-v = iter.next();
-done = iter.done();
-console.log(v, done);
+console.log(pairwise([1, 4, 2, 3, 0, 5], 7));
