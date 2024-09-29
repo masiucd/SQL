@@ -12,8 +12,8 @@ This repository contains implementations of various data structures and algorith
 ## Data Structures
 
 - [ ] Arrays
-  - [ ] Dynamic Array
-  - [ ] Static Array
+  - [x] Dynamic Array
+  - [x] Static Array
 - [ ] Linked Lists
   - [ ] Singly Linked List
   - [ ] Doubly Linked List
@@ -147,7 +147,7 @@ This repository contains implementations of various data structures and algorith
 - [ ] Dynamic Programming
 - [ ] Mixed
   - [x] multiple-of-3-or-5
-  - [] fizz-buzz
+  - [ ] fizz-buzz
   - [x] update-inventory
 
 ## Contributing
