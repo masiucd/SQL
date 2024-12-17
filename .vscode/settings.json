@@ -1,0 +1,7 @@
+{
+  // ...existing code...
+  "deno.enable": true,
+  "deno.lint": true,
+  "biome.enabled": false
+  // ...existing code...
+}

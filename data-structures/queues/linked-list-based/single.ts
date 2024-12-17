@@ -29,7 +29,7 @@ export class SingleLinkedList<T> implements List<T> {
       this.tail = newNode;
       this.length++;
     } else {
-      this.t;
+      //
     }
   }
   prepend(value: T): void {
