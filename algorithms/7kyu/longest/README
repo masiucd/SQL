@@ -1,0 +1,23 @@
+# Longest
+
+## Description
+
+Write a function `longest(s1, s2)` that takes two strings, `s1` and `s2` and returns the longest string composed of distinct letters. Each letter in the result must only appear once.
+
+## Example
+
+```javascript
+longest("aretheyhere", "yestheyarehere") == "aehrsty";
+longest("loopingisfunbutdangerous", "lessdangerousthancoding") ==
+  "abcdefghilnoprstu";
+longest("inmanylanguages", "theresapairoffunctions") == "acefghilmnoprstuy";
+```
+
+## Note
+
+Tests are case sensitive.
+
+## Tags
+
+- Algorithms
+- Strings
