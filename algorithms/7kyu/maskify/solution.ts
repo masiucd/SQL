@@ -12,3 +12,7 @@ export function maskify(cc: string) {
   let result = xs.slice(0, xs.length - 4) + fourLastOfCC;
   return result;
 }
+
+export function maskifyV2(cc: string) {
+  return cc.slice(-4).padStart(cc.length, "#");
+}
