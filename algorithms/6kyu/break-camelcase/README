@@ -1,0 +1,12 @@
+# Camel case break
+
+## Task
+
+Complete the solution so that the function will break up camel casing, using a space between words.
+
+## Examples:
+
+```javascript
+solution("camelCasing") == "camel Casing";
+solution("camelCasingTest") == "camel Casing Test";
+```
