@@ -5,11 +5,11 @@
  * @returns {number} - The first duplicate number found in the array. If no duplicate is found, returns -Infinity.
  */
 export function findDup(xs: number[]) {
-  let store = new Map();
+  let store = new Set();
   let duplicate = -Infinity;
   for (let x of xs) {
     if (!store.has(x)) {
-      store.set(x, true);
+      store.add(x);
     } else {
       duplicate = x;
     }
