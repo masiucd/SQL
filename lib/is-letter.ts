@@ -11,6 +11,10 @@ export function isAlphabeticCharacter(character: string): boolean {
   return alphabeticCharCodes.includes(character.charCodeAt(0));
 }
 
+export function isAlphabeticCharacterV2(character: string): boolean {
+  return /^[a-zA-Z]+$/.test(character);
+}
+
 /**
  * Checks if the given character is a non-alphabetic character.
  *
