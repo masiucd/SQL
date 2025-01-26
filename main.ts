@@ -1,18 +1,15 @@
-// return masked string
-function maskify(cc: string) {
-  if (cc.length <= 4) return cc;
-  let xs = cc
-    .split("")
-    .reduce((acc: string[]) => {
-      acc.push("#");
-      return acc;
-    }, [])
-    .join("");
+import {isAlphabeticCharacter} from "@dsajs/lib";
 
-  let fourLastOfCC = cc.slice(cc.length - 4, cc.length);
-  return xs.slice(0, xs.length - 4) + fourLastOfCC;
-}
+let a = "Pig latin is cool";
 
-console.log(maskify("4556364607935616")); // '############5616'
-console.log(maskify("64607935616")); // '#######5616'
-console.log(maskify("1")); // '1'
+let res = a.replace(/\w+/g, (word) => {
+  if (word.split("").every(isAlphabeticCharacter)) {
+    let firstLetter = word[0];
+    if (firstLetter) {
+      word = word.slice(1) + firstLetter + "ay";
+    }
+  }
+  return word;
+});
+
+console.log(res); // "igPay atinlay siay oolcay"

@@ -1,4 +1,4 @@
-import {isAlphabeticCharacter} from "@/lib/is-letter.ts";
+import {isAlphabeticCharacter} from "@dsajs/lib";
 
 export function pigIt(a: string): string {
   let res = a.replace(/\w+/g, (word) => {

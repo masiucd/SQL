@@ -1,4 +1,6 @@
 {
+  "name": "@dsajs/monorepo",
+  "workspace": ["./lib"],
   "tasks": {
     "dev": "deno run --watch main.ts"
   },
