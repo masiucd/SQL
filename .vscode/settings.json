@@ -2,6 +2,12 @@
   // ...existing code...
   "deno.enable": true,
   "deno.lint": true,
-  "biome.enabled": false
+  "biome.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  }
   // ...existing code...
 }
